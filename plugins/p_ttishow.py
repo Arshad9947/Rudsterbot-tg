@@ -8,7 +8,7 @@ from utils import get_size, temp
 from script import Script
 from pyrogram.errors import ChatAdminRequired
 
-"""-----------------------------------------https://t.me/JosProjects --------------------------------------"""
+"""-----------------------------------------https://t.me/Rudster_Modz --------------------------------------"""
 
 @Client.on_message(filters.new_chat_members & filters.group)
 async def save_group(bot, message):
@@ -38,7 +38,7 @@ async def save_group(bot, message):
             return
         buttons = [[
             InlineKeyboardButton('help', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            InlineKeyboardButton('updates', url='https:/t.me/JosProjects')
+            InlineKeyboardButton('Chat', url='https:/t.me/Rudster_Modz')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -47,7 +47,7 @@ async def save_group(bot, message):
     else:
         for u in message.new_chat_members:
             zaute = [[
-            InlineKeyboardButton('👉 ⚠️ Press me... 🥰 👈', url="https://t.me/josprojects")
+            InlineKeyboardButton('👉 ⚠️ Press me... 🥰 👈', url="https://t.me/Rudster_Modz")
         ]]
             if (temp.MELCOW).get('welcome') is not None:
                 try:
@@ -177,7 +177,7 @@ async def gen_invite(bot, message):
 
 @Client.on_message(filters.command('ban_users') & filters.user(ADMINS))
 async def ban_a_user(bot, message):
-    # https://t.me/Josprojects/
+    # https://t.me/Rudster_Modz/
     if len(message.command) == 1:
         return await message.reply('Give me a user id / username')
     r = message.text.split(None)
@@ -244,7 +244,7 @@ async def unban_a_user(bot, message):
     
 @Client.on_message(filters.command('users') & filters.user(ADMINS))
 async def list_users(bot, message):
-    # https://t.me/josprojects/
+    # https://t.me/Rudster_Modz/
     raju = await message.reply('Getting List Of Users')
     users = await db.get_all_users()
     out = "Users Saved In DB Are:\n\n"
